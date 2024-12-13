@@ -30,8 +30,8 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="user"],
-input[type="pass"] {
+input[type="username"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
