@@ -1,22 +1,106 @@
 <html>
 <head>
-    <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Advanced Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .login-box {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-box h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .login-box .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .login-box .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+        .login-box .input-group input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+        .login-box .input-group .fa {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background-color: #555;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="dashboard.html" method="GET">
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
             <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <i class="fa fa-user"></i>
+                <input type="text" id="username" placeholder="Username">
             </div>
             <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <i class="fa fa-lock"></i>
+                <input type="password" id="password" placeholder="Password">
             </div>
-             <button type="submit">Login</button>
-        </form>
+            <button onclick="login()">Login</button>
+            <div class="error-message" id="error-message"></div>
+        </div>
     </div>
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+
+            if (username === 'user' && password === 'pass') {
+                errorMessage.textContent = '';
+                window.location.href = 'dashboard.html';
+            } else {
+                errorMessage.textContent = 'Invalid username or password';
+                window.location.href = 'handler.html';
+            }
+        }
+    </script>
 </body>
 </html>
