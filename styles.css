@@ -1,71 +1,53 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.login-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.container {
+    width: 80%;
+    margin: auto;
     padding: 20px;
-    width: 300px;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 10px;
 }
 
-.input-group {
-    margin-bottom: 15px;
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-label {
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    text-decoration: underline;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.section {
     display: block;
-    margin-bottom: 5px;
-    color: #333;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-input:focus {
-    border-color: #333;
-    outline: none;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-.error-message {
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-}
+.card {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px 0;
+    background-color
